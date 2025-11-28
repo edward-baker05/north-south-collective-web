@@ -22,7 +22,15 @@ export default function Hero() {
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-black to-black opacity-80" />
       </motion.div>
 
-      <div className="container mx-auto px-6 z-10 flex flex-col items-center text-center">
+      <div className="container mx-auto px-6 z-10 flex flex-col items-center text-center relative">
+        {/* Subtle Background Glow */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] md:w-[600px] h-[300px] bg-[#bc1919]/10 blur-[100px] rounded-full pointer-events-none -z-10"
+        />
+
         <div className={isLoaded ? "p-4 -m-4" : "overflow-hidden"}>
           <motion.h1 
             initial={{ y: "100%" }}
