@@ -15,13 +15,20 @@ export default function Footer() {
             An independent record label dedicated to exploring the spaces between genres.
           </p>
           <div className="flex space-x-4">
-            {['Instagram', 'Twitter', 'Bandcamp', 'SoundCloud'].map((social) => (
+            {[
+              { name: 'Instagram', href: 'https://www.instagram.com/northsouth.collective' },
+              { name: 'Twitter', href: '#' },
+              { name: 'Bandcamp', href: '#' },
+              { name: 'SoundCloud', href: '#' }
+            ].map((social) => (
               <a
-                key={social}
-                href="#"
+                key={social.name}
+                href={social.href}
+                target={social.href.startsWith('http') ? "_blank" : undefined}
+                rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
                 className="text-sm text-white/60 hover:text-[#bc1919] uppercase tracking-wider transition-colors"
               >
-                {social}
+                {social.name}
               </a>
             ))}
           </div>
