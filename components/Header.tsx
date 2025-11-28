@@ -37,7 +37,7 @@ export default function Header() {
              src="/logo.jpg"
              alt="NSC Logo"
              fill
-             className="object-contain grayscale"
+             className="object-contain"
            />
         </Link>
 
