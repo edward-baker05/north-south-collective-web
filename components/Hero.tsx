@@ -64,7 +64,7 @@ export default function Hero() {
         >
           <div className="absolute -inset-4 bg-[#bc1919]/20 blur-2xl rounded-full animate-pulse" />
           <p className="relative text-neutral-400 max-w-lg mx-auto text-sm md:text-base tracking-[0.3em] uppercase">
-            Brighton Record Label.</br> Led by Students.
+            Brighton Record Label.<br> Led by Students.
           </p>
         </motion.div>
       </div>
